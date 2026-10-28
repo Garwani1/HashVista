@@ -1,0 +1,33 @@
+{
+  "PreparedDate": "2026-10-25",
+  "Architecture": "win-x64",
+  "Sdk": {
+    "Version": "10.0.402",
+    "Url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.402/dotnet-sdk-10.0.402-win-x64.zip",
+    "Sha512": "ae4fd528cb7e9f6af6aaf7de36715a69f761f183744f1bb3025d19f5a92447090ec561410e46266c1d10a63781ed6f3de771760bc76c876d87daabc367b898cd",
+    "ChecksumSource": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/10.0/releases.json"
+  },
+  "FFmpeg": {
+    "Version": "9.0.2-essentials_build-www.gyan.dev",
+    "Url": "https://github.com/GyanD/codexffmpeg/releases/download/9.0.2/ffmpeg-9.0.2-essentials_build.zip",
+    "Sha256": "60f467265b1e312373dbcd92200c2618a74850f98d3d078e94296bb3fa2047ba",
+    "ChecksumSource": "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip.sha256",
+    "DistributorListedBy": "https://ffmpeg.org/download.html",
+    "License": "GPL-3.0",
+    "SourceCommit": "946fcce07b",
+    "SourceUrl": "https://codeload.github.com/FFmpeg/FFmpeg/tar.gz/946fcce07b",
+    "SourceSha256": "86f82e82456005881d1b97e9ce02f8a40bf2d181c8c958f8ae736886fdba2a34",
+    "BuildConfiguration": "FFMPEG_README.txt",
+    "WindowsExecutionVerified": true
+  },
+  "ExifTool": {
+    "Version": "13.59",
+    "Url": "https://sourceforge.net/projects/exiftool/files/exiftool-13.59_64.zip/download",
+    "OfficialProject": "https://exiftool.org/",
+    "Sha256": "44b512b25af500724ba579d0a53c8fc5851628b692dd5e5d94ae4a15c2cba9ec",
+    "ChecksumBasis": "Pinned observed package SHA256; upstream independent signature not verified",
+    "LicenseFile": "exiftool_files/LICENSE",
+    "Source": "Included Perl modules in exiftool_files/lib/Image",
+    "WindowsExecutionVerified": true
+  }
+}

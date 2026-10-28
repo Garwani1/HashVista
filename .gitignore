@@ -1,0 +1,39 @@
+# Generated builds and caches
+**/bin/
+**/obj/
+artifacts/
+delivery/
+public-release/
+tools/
+downloads/
+.vs/
+.dotnet*/
+.nuget/
+
+# Local scans, reports, and private test evidence
+Data/
+evidence/
+**/runs/
+**/*-runs/
+*.ghscan
+*.ghscan-*
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.csv
+*.csv.scan.json
+*.log
+*.zip
+*.pdb
+
+# Optional tools are acquired locally, never committed as binaries
+dependencies/*
+!dependencies/DEPENDENCIES.json
+
+# Local editor/environment state
+.env
+.env.*
+*.user
+*.suo
+.DS_Store

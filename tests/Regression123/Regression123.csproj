@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup>
+<OutputType>Exe</OutputType><TargetFramework>net10.0-windows</TargetFramework><UseWPF>true</UseWPF><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable>
+<AppDir Condition="'$(AppDir)'==''">$(MSBuildThisFileDirectory)..\..\bin\Release\net10.0-windows\win-x64</AppDir>
+</PropertyGroup>
+<ItemGroup>
+<Reference Include="HashVista"><HintPath>$(AppDir)\HashVista.dll</HintPath><Private>true</Private></Reference>
+<Reference Include="Microsoft.Data.Sqlite"><HintPath>$(AppDir)\Microsoft.Data.Sqlite.dll</HintPath><Private>true</Private></Reference>
+<Reference Include="SQLitePCLRaw.batteries_v2"><HintPath>$(AppDir)\SQLitePCLRaw.batteries_v2.dll</HintPath><Private>true</Private></Reference>
+<Reference Include="SQLitePCLRaw.core"><HintPath>$(AppDir)\SQLitePCLRaw.core.dll</HintPath><Private>true</Private></Reference>
+<Reference Include="SQLitePCLRaw.provider.e_sqlite3"><HintPath>$(AppDir)\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath><Private>true</Private></Reference>
+<Content Include="$(AppDir)\e_sqlite3.dll"><Link>e_sqlite3.dll</Link><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+</ItemGroup>
+</Project>
+

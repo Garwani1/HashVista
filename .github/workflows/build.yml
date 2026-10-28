@@ -1,0 +1,54 @@
+name: Windows core build and checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  core:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+      DOTNET_NOLOGO: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - name: Restore pinned application packages
+        shell: pwsh
+        run: dotnet restore .\HashVista.csproj --locked-mode -p:IncludeMediaTools=false
+      - name: Publish self-contained core
+        shell: pwsh
+        run: dotnet publish .\HashVista.csproj -c Release -r win-x64 --self-contained true --no-restore -p:IncludeMediaTools=false -o .\artifacts\core
+      - name: Run controlled core integration checks
+        shell: pwsh
+        run: |
+          $appDir = Join-Path $PWD 'artifacts\core'
+          dotnet run --project .\tests\CoreIntegration\CoreIntegration.csproj -c Release ('-p:AppDir=' + $appDir) -- .
+      - name: Run regression checks against the published assemblies
+        shell: pwsh
+        run: |
+          $appDir = Join-Path $PWD 'artifacts\core'
+          foreach ($suite in @('Regression123', 'Regression130', 'FilteredExport130')) {
+            $project = Join-Path $PWD ('tests\' + $suite + '\' + $suite + '.csproj')
+            if (Test-Path -LiteralPath $project) {
+              dotnet run --project $project -c Release ('-p:AppDir=' + $appDir) -p:IncludeMediaTools=false -- .
+              if ($LASTEXITCODE -ne 0) { throw ($suite + ' failed') }
+            }
+          }
+      - name: Stage clean public contents
+        shell: pwsh
+        run: .\scripts\prepare-public.ps1 -DestinationRoot .\artifacts\public -CorePublishDirectory .\artifacts\core
+      - name: Upload core artifact and corresponding source
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-x64-core-and-source
+          path: artifacts/public/
+          if-no-files-found: error
+          include-hidden-files: true

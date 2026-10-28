@@ -1,0 +1,69 @@
+{
+  "Schema": "HashVista-SyntheticFixtures-v1",
+  "VerifiedDate": "2026-10-28",
+  "OriginalGenerationDate": "2026-10-25",
+  "Generator": "FFmpeg 9.0.2 testsrc2 and sine sources",
+  "Scope": "Generated test patterns, sine tones and fabricated EXIF fields only. No user media or upstream camera/HEIC samples.",
+  "Files": [
+    {
+      "Path": "media/animated.gif",
+      "Bytes": 6303,
+      "Sha256": "f04fd2c0d2ba9e238a045d8701ebf3a58bf7f49c6ebd851188c956cc6250b094"
+    },
+    {
+      "Path": "media/orientation6-exif.jpg",
+      "Bytes": 2805,
+      "Sha256": "a0876428a08f0704d63e101a1f600cae403926b5927a1f2fdac0e0855df32a4c"
+    },
+    {
+      "Path": "media/transparent.png",
+      "Bytes": 120,
+      "Sha256": "c2a22b3da20faadaddfc980640c589df535853b51a8f9defa6a5adbd38ea3fa9"
+    },
+    {
+      "Path": "media/variable-frame-rate.mp4",
+      "Bytes": 14684,
+      "Sha256": "88e7741812b6601ac7d3e9c04a78fbcffd18d925db287bba409675983756960c"
+    },
+    {
+      "Path": "media/very-short.mp4",
+      "Bytes": 3810,
+      "Sha256": "defb3ee5598d073ed4bebba41ba977ff2e099f6d5e2da8fe4baced13a2181ae2"
+    },
+    {
+      "Path": "media/ألوان, sample.bmp",
+      "Bytes": 18486,
+      "Sha256": "14f1387217ac6c0e6a92e856ee4d855858ab28c4edda1e44b53a00978dfbab2b"
+    },
+    {
+      "Path": "media/ألوان, sample.gif",
+      "Bytes": 2864,
+      "Sha256": "15edb755d7aa4a6b0211398b3f4cf9041ce3eb8883f935f7d93c32003ac4b7a2"
+    },
+    {
+      "Path": "media/ألوان, sample.jpg",
+      "Bytes": 2365,
+      "Sha256": "a3eb7ea0cd50f7ff14b4b6b050497cffc29d30b3a1de541c4e2274862134bf18"
+    },
+    {
+      "Path": "media/ألوان, sample.png",
+      "Bytes": 1858,
+      "Sha256": "7575ac0dffcec190bd1f9838cd8d35cec08dccb118694dfb37b845ea668f03ad"
+    },
+    {
+      "Path": "media/ألوان, sample.tiff",
+      "Bytes": 8043,
+      "Sha256": "e217a51dc08a8028a48126244b91b0bbc7e73564962b52f8010e44a3fe6a0791"
+    },
+    {
+      "Path": "media/ألوان, sample.webp",
+      "Bytes": 1338,
+      "Sha256": "4742ee7645b839dd73295d29f529091c0f085f92211f70cc1dd83f5ad09e8987"
+    },
+    {
+      "Path": "media/فيديو, two-audio.mp4",
+      "Bytes": 50485,
+      "Sha256": "32aa79064f3a015d8907b5cbdf4cc9ad1b3340785d346c21b13159fbd8efd1d7"
+    }
+  ]
+}
