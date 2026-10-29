@@ -1,5 +1,7 @@
 # HashVista — Hash & Media Scanner
 
+**[⬇️ Download HashVista for Windows (x64)](https://github.com/Garwani1/HashVista/releases/latest)** · [تحميل البرنامج](https://github.com/Garwani1/HashVista/releases/latest)
+
 A local Windows application for file inventory, full-file hashes, optional image/video inspection, and CSV export.
 
 The scanner records every in-scope file independently, including unique files, identical copies with different names, empty files, and failures. It does not find duplicates, compare files, group similar media, move files, or delete source files.
